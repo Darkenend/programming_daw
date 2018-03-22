@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Factorial_AReal">
+    <archive path="/media/alumnodaw/Dark's HDD/Clase/Programacion/eclipse/xd/bin/xd/Factorial_AReal.zip" />
+  </library>
+  <library name="Factorial_AReal1">
+    <archive path="/media/alumnodaw/Dark's HDD/Clase/Programacion/eclipse/xd/src/xd/Factorial_AReal.zip" />
+  </library>
+  <library name=".mylyn">
+    <archive path="/media/alumnodaw/Dark's HDD/Clase/Programacion/eclipse/.metadata/.mylyn/tasks.xml.zip" />
+    <archive path="/media/alumnodaw/Dark's HDD/Clase/Programacion/eclipse/.metadata/.mylyn/.tasks.xml.zip" />
+    <archive path="/media/alumnodaw/Dark's HDD/Clase/Programacion/eclipse/.metadata/.mylyn/repositories.xml.zip" />
+  </library>
+</eclipse-userlibraries>
+
