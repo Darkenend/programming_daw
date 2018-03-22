@@ -94,4 +94,10 @@ public class CuentaBancaria {
         boolean res = false;
         return res;
     }
+
+    //Method that returns a string with all the shit
+    public String toString(String titular, String CCC, String saldo) {
+        String res = "La cuenta "+CCC+" con titular "+titular+" dispone de un saldo de "+saldo;
+        return res;
+    }
 }
