@@ -88,4 +88,10 @@ public class CuentaBancaria {
     public void moneyDecrease(float payment) {
         this.saldo=this.saldo-payment;
     }
+
+    //Method to validate the CCC
+    public static boolean comprobarCCC(String CCC){
+        boolean res = false;
+        return res;
+    }
 }
