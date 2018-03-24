@@ -17,10 +17,6 @@ public class examenParametrizacion {
      */
 
     public static void main(String[] args) throws InterruptedException {
-        /*
-         *  TODO Implement Start
-         *  TODO Figure out what's going on
-         */
         examenParametrizacion op = new examenParametrizacion();
         op.start();
         op.exit();
