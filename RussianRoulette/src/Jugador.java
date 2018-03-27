@@ -9,11 +9,8 @@ import java.util.Random;
  */
 
 public class Jugador {
-    /*
-        TODO Add documentation of methods
-     */
     private int id;
-    private String nombre;
+    protected String nombre;
     private boolean vivo;
 
     /**
@@ -30,21 +27,24 @@ public class Jugador {
         System.out.println("Player "+this.nombre+" with ID "+this.id+" has been created.");
     }
 
+    /**
+     * disparar is basically the action of shooting with a revolver,
+     * it will output if
+     * @param r This is the revolver that has been already constructed.
+     * @return If the return is true, a bullet is shot, this means that the player is dead,
+     * if false, a bullet isn't shot, the player is still alive.
+     */
     public boolean disparar(Revolver r) {
         Random rng = new Random();
+        System.out.println("Aims at his head and...");
         int rngeezuswills = rng.nextInt(4);
         if (r.disparar()) {
-            if (this.nombre=="Darkenend") {
-                System.out.println("BUENO CARALLO");
-            } else {
-                System.out.println("You died.");
-            }
             switch (rngeezuswills) {
                 case 0:
-                    System.out.println("And we see a bit of pink mist, and everyone wipes their faces, just in case.");
+                    System.out.println("...we see a bit of pink mist, and everyone wipes their faces, just in case.");
                     break;
                 case 1:
-                    System.out.println("BANG, whoops, "+this.nombre+"is dead.");
+                    System.out.println("BANG, whoops");
                     break;
                 case 2:
                     System.out.println("Press F to pay respects.\nWait wrong game.");
@@ -54,18 +54,15 @@ public class Jugador {
                     break;
             }
             this.vivo=false;
-            return false;
+            return true;
         }
         else {
-            if (this.nombre=="Darkenend") {
-                System.out.println("VAS MORRER");
-            }
             switch (rngeezuswills) {
                 case 0:
                     System.out.println("CLICK, you ain't dead yet!");
                     break;
                 case 1:
-                    System.out.println(this.nombre+"is one lucky pal.");
+                    System.out.println(this.nombre+" is one lucky pal.");
                     break;
                 case 2:
                     System.out.println("HEY, YOU'RE NOT DEAD!");
@@ -74,7 +71,7 @@ public class Jugador {
                     System.out.println("You still got it under control, right?");
                     break;
             }
-            return true;
+            return false;
         }
     }
 }

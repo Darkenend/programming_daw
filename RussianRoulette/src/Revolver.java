@@ -40,7 +40,6 @@ public class Revolver {
      * the revolver has shot a bullet and killed someone.)
      */
     public boolean disparar() {
-        System.out.println("Aims at his head and...");
         if (this.current_position==this.round_position) return true;
         else return false;
     }
