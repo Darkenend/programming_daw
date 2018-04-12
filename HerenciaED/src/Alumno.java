@@ -4,12 +4,15 @@
  * @version 1.0.0
  */
 
-public class Alumno {
+public abstract class Alumno {
     /*
         TODO Implement attributes
         TODO Implement methods
         TODO Figure more stuff
      */
-    protected String name, house, fav_sub = "Entornos de Desarrollo mágicos", reply;
+    protected String name, lastname, house, fav_sub = "Entornos de Desarrollo mágicos",possesions, reply;
+    protected int age;
 
+    protected abstract void generateName();
+    protected abstract void generateAge();
 }
