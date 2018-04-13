@@ -19,4 +19,9 @@ public class Hufflepuff extends Alumno {
         temp = rng.nextInt(10);
         lastname = lastname+" "+lastnames[temp];
     }
+
+    public void generateAge() {
+        Random rng = new Random();
+        age = rng.nextInt(6)+12;
+    }
 }
