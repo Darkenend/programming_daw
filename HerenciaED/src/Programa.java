@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * @author Álvaro Real
  * @author darkenend.net
@@ -10,11 +12,18 @@ public class Programa {
      * @param args Command line arguments
      */
     public static void main(String[] args) {
+        int student_amount;
         /*
          *  TODO Implement Start
          *  TODO Figure out what's going on
          */
-
+        Scanner kb = new Scanner(System.in);
+        student_amount = kb.nextInt();
+        while (student_amount < 1) {
+            System.out.println("Debes introducir un numero positivo");
+            student_amount = kb.nextInt();
+        }
+        Alumno[] op = new Alumno[student_amount];
     }
 
 }

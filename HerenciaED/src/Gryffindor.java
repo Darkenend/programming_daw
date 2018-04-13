@@ -9,20 +9,56 @@ import java.util.Random;
 public class Gryffindor extends Alumno {
     private String mascota;
 
+    public Gryffindor() {
+        generateName();
+        generateAge();
+        setReply();
+        setHouse();
+        setProperty();
+    }
+
     public void generateName() {
         Random rng = new Random();
-        String[] names = new String[10];
-        String[] lastnames = new String[10];
+        String[] names = {"Noah", "Emma", "William", "Olivia", "James", "Ava", "Jacob", "Sophia", "Elijah", "Isabella"};
+        String[] lastnames = {"Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia", "Rodriguez", "Wilson"};
         int temp = rng.nextInt(10);
-        name = names[temp];
-        temp = rng.nextInt(10);
-        lastname = lastnames[temp];
-        temp = rng.nextInt(10);
-        lastname = lastname+" "+lastnames[temp];
+        this.name = names[temp];
+        temp = rng.nextInt(names.length);
+        this.lastname = lastnames[temp];
     }
 
     public void generateAge() {
         Random rng = new Random();
-        age = rng.nextInt(6)+12;
+        this.age = rng.nextInt(6)+12;
+    }
+
+    public void setReply() {
+        this.reply="Por supuesto los he hecho";
+    }
+
+    public void setHouse() {
+        this.house="Gryffindor";
+    }
+
+    public void setProperty() {
+        Random rng = new Random();
+        int temp = rng.nextInt(4);
+        switch (temp) {
+            case 0:
+                this.mascota="Buho";
+                break;
+            case 1:
+                this.mascota="Rata";
+                break;
+            case 2:
+                this.mascota="Gato";
+                break;
+            case 3:
+                this.mascota="Conejo";
+                break;
+            default:
+                this.mascota="Paloma";
+                break;
+        }
     }
 }
