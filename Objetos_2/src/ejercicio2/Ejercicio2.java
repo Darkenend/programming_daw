@@ -10,9 +10,6 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
 
-    /*
-        TODO Clean up code a bit, maybe needs optimizations?
-     */
 
     /**
      * This method gets the "integer" part of the double

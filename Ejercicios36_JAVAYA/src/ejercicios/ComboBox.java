@@ -21,9 +21,6 @@ public class ComboBox extends JFrame implements ActionListener {
      */
 
     public static void main(String[] args) {
-        /*
-         * TODO The program should work right now, test and delete if there's no issues
-         */
         ComboBox op = new ComboBox();
         op.setBounds(0, 0, 800, 600);
         op.setVisible(true);

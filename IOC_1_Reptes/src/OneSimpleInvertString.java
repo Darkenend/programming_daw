@@ -13,7 +13,6 @@ public class OneSimpleInvertString {
 	String input;
 	
 	public OneSimpleInvertString() {
-		// TODO Auto-generated constructor stub
 		System.out.println("Inserta una frase:");
 		input=teclado.nextLine();
 	}
@@ -25,7 +24,6 @@ public class OneSimpleInvertString {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		OneSimpleInvertString op=new OneSimpleInvertString();
 		op.InvertedPrint();
 	}

@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class MaximComuDivisor {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		MaximComuDivisor op = new MaximComuDivisor();
 		op.start();
 	}

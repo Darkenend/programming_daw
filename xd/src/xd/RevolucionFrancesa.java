@@ -13,10 +13,6 @@ public class RevolucionFrancesa {
      */
 
     public static void main(String[] args) {
-        /*
-         *  TODO Implement Start
-         *  TODO Figure out what's going on
-         */
         RevolucionFrancesa op = new RevolucionFrancesa();
         op.start();
     }

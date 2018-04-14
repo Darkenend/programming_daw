@@ -19,10 +19,6 @@ public class recuperaParametrizacion {
      */
 
     public static void main(String[] args) throws InterruptedException {
-        /*
-         *  TODO Implement Start
-         *  TODO Figure out what's going on
-         */
         recuperaParametrizacion op = new recuperaParametrizacion();
         op.start();
         op.exit();

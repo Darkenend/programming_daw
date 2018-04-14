@@ -11,9 +11,6 @@ public class Ejercicio3 {
      * @param args Command line arguments
      */
     public static void main(String[] args) {
-        /*
-         *  TODO Create main stuff
-         */
         Scanner kb = new Scanner(System.in);
         int n_in, k_in;
         System.out.println("Introduce el valor de N");

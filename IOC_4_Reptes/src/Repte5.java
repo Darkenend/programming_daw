@@ -12,7 +12,6 @@ public class Repte5 {
 	Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Repte5 op = new Repte5();
 		op.start();
 	}

@@ -23,11 +23,6 @@ public class ResolutionChanger extends JFrame implements ActionListener {
      */
 
     public static void main(String[] args) {
-        /*
-         *  TODO Implement Formulary
-         *  TODO Add Listeners to buttons
-         *  TODO Set default resolution through introduction
-         */
         ResolutionChanger op = new ResolutionChanger();
         op.setBounds(0, 0, x, y);
         op.setVisible(true);

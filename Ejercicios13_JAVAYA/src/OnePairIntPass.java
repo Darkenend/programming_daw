@@ -52,7 +52,7 @@ public class OnePairIntPass {
 	
 	//The third step is the display of the results
 	public void display() {
-		if (valid_pass == true) {
+		if (valid_pass) {
 			System.out.println("Contraseña Correcta");
 		} else {
 			System.out.println("La contraseña es incorrecta para el usuario: " + username);
@@ -61,7 +61,6 @@ public class OnePairIntPass {
 	
 	//Here's the main function where it will all be loaded in
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		OnePairIntPass operation=new OnePairIntPass();
 		operation.input();
 		operation.operating();

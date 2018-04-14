@@ -13,10 +13,6 @@ public class Ejercicio4 {
      */
 
     public static void main(String[] args) {
-        /*
-         *  TODO Implement Start
-         *  TODO Figure out what's going on
-         */
         String profesion;
         int edad=0, rebeliones = 0;
         Scanner teclado = new Scanner(System.in);

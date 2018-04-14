@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class Repte4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Repte4 op = new Repte4();
 		op.start();
 	}

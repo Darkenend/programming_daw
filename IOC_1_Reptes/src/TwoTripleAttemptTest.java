@@ -13,7 +13,6 @@ public class TwoTripleAttemptTest {
 	public static final char Answer = 'b';
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner teclado = new Scanner(System.in);
 		int intentos = 0;
 		System.out.println("Endevina la pregunta.");

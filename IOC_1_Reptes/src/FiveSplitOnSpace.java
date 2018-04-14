@@ -12,7 +12,6 @@ public class FiveSplitOnSpace {
 	String input;
 	String[] stringarray;
 	public FiveSplitOnSpace() {
-		// TODO Auto-generated constructor stub
 		System.out.println("Introdueix una frase:");
 		input=teclado.nextLine();
 	}
@@ -28,7 +27,6 @@ public class FiveSplitOnSpace {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		FiveSplitOnSpace op=new FiveSplitOnSpace();
 		op.Conversion();
 		op.Print();

@@ -9,7 +9,6 @@
 public class DiaSetmana {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		DiaSetmana op = new DiaSetmana();
 		op.start();
 	}

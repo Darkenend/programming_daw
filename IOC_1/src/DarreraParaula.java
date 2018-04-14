@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class DarreraParaula {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Ves escrivint paraules.");
 		System.out.println("Per a acabar, escriu la paraula fi");

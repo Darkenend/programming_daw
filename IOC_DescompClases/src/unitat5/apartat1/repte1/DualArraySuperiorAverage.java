@@ -18,7 +18,6 @@ public class DualArraySuperiorAverage {
     private double[] array1, array2;
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         DualArraySuperiorAverage op = new DualArraySuperiorAverage();
         op.start();
     }

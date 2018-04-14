@@ -42,7 +42,6 @@ public class OneIrregularMatrix {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		OneIrregularMatrix operation=new OneIrregularMatrix();
 		operation.matrixcreation();
 		operation.input();

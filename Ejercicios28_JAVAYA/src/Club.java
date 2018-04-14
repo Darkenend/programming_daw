@@ -15,7 +15,6 @@ public class Club {
 
 	public Club() {
 		Scanner teclado = new Scanner(System.in);
-		// TODO Auto-generated constructor stub
 		member1 = new Member(teclado);
 		member2 = new Member(teclado);
 		member3 = new Member(teclado);
@@ -36,7 +35,6 @@ public class Club {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Club club = new Club();
 		club.maxage();
 	}

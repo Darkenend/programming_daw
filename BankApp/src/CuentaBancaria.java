@@ -8,8 +8,6 @@ public class CuentaBancaria {
     /*
         TODO Create all methods
         TODO Implement functionality for all methods
-        TODO Complete Complex Constructor (Line 27)
-        TODO Create Simple Constructor (Line 44)
      */
     /*
     This class sorts out how a bank account works

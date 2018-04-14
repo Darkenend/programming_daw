@@ -105,7 +105,6 @@ public class TwoStringMultipleOutputs {
 	
 	//And everything goes here to be executeeeeeeeeeeeeeeeeed!
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		TwoStringMultipleOutputs op=new TwoStringMultipleOutputs();
 		op.StringToCharArray();
 		op.FirstHalf();

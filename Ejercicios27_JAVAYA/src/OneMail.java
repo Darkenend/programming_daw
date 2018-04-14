@@ -41,7 +41,6 @@ public class OneMail {
 	
 	//And here's the main where everything is executed
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		OneMail op=new OneMail();
 		op.HasAt();
 		op.Output();

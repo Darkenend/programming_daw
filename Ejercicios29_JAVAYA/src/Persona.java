@@ -14,7 +14,6 @@ public class Persona {
 	protected int age;
 
 	public Persona() {
-		// TODO Auto-generated constructor stub
 		teclado = new Scanner(System.in);
 	}
 	

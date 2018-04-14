@@ -13,7 +13,6 @@ public class InverteixArrayText {
 	public static final int num_words = 5;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner teclado = new Scanner(System.in);
 		String[] array=new String[5];
 		String[] array2=new String[5];

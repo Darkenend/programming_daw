@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Repte3 {
 	Scanner teclado = new Scanner(System.in);
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Repte3 op = new Repte3();
 		op.start();
 	}

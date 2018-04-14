@@ -8,9 +8,9 @@
 import java.util.Scanner;
 
 public class OneAverageTemperatureCountries {
-	Scanner teclado = new Scanner(System.in);
-	int major_case;
-	float major_comparison;
+	private Scanner teclado = new Scanner(System.in);
+	private int major_case;
+	private float major_comparison;
 	private String[] country=new String[4];
 	private float[][] table=new float[4][3];
 	private float[] average=new float[4];
@@ -73,7 +73,6 @@ public class OneAverageTemperatureCountries {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		OneAverageTemperatureCountries operations=new OneAverageTemperatureCountries();
 		operations.nameinput();
 		operations.tempinput();

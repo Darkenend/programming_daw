@@ -6,7 +6,6 @@ public class Trabajador {
 	public static int cat_empleado=0, cat_encargado=1, cat_directivo=2, ant_novato=0, ant_maduro=1, ant_experto=2;
 	
 	public Trabajador(String nombre, int edad, int categoria, int antiguedad) {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public double calcularSueldo(int edad, int categoria, int antiguedad) {

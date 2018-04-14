@@ -21,9 +21,7 @@ public class BrowserSelector extends JFrame implements ActionListener, ChangeLis
      */
 
     public static void main(String[] args) {
-        /*
-         *  TODO Test and delete if everything is okay
-         */
+
         BrowserSelector op = new BrowserSelector();
         op.setVisible(true);
     }

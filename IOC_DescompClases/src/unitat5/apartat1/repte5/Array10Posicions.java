@@ -12,7 +12,6 @@ import utilitats.arrays.Fill0To10IntArray;
 public class Array10Posicions {
     private int[] array = new int[10];
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         Array10Posicions op = new Array10Posicions();
         op.start();
     }

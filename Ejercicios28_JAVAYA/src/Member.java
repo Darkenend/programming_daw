@@ -14,7 +14,6 @@ public class Member {
 	private int club_age;
 
 	public Member(Scanner teclado) {
-		// TODO Auto-generated constructor stub
 		System.out.println("Introduce el nombre del miembro:");
 		name = teclado.next();
 		System.out.println("Introduce su antiguedad en años:");

@@ -14,7 +14,6 @@ public class ThreeCountAChar {
 	int count = 0;
 	String[] strings;
 	public ThreeCountAChar() {
-		// TODO Auto-generated constructor stub
 		System.out.println("¿Cuantas frases deseas introducir?");
 		string_amount=teclado.nextInt();
 		String[] strings = new String[string_amount];

@@ -12,7 +12,6 @@ public class SixAcronymGenerator {
 	String input, output;
 	String[] array;
 	public SixAcronymGenerator() {
-		// TODO Auto-generated constructor stub
 		System.out.println("Introduce lo que se desee acronimizar:");
 		input=teclado.nextLine();
 	}
@@ -30,7 +29,6 @@ public class SixAcronymGenerator {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		SixAcronymGenerator op=new SixAcronymGenerator();
 		op.SplitAndJoining();
 		op.Print();

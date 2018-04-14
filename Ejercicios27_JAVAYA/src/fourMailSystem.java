@@ -21,7 +21,6 @@ public class fourMailSystem {
 	boolean at=false;
 
 	public fourMailSystem() {
-		// TODO Auto-generated constructor stub
 		for (int i = 0; i < array_names.length; i++) {
 			System.out.println("Introduce el nombre de la persona "+(i+1)+":");
 			array_names[i]=teclado.nextLine();
@@ -77,7 +76,6 @@ public class fourMailSystem {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		fourMailSystem op=new fourMailSystem();
 		op.printAll();
 		op.scanningMail();

@@ -51,7 +51,6 @@ public class TwoEmployeesDaysMissed {
 		System.out.println("El empleado "+less_misses_string+" es el que menos faltó, con "+less_misses_int+" dias.");
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		TwoEmployeesDaysMissed operations=new TwoEmployeesDaysMissed();
 		operations.input();
 		operations.misses();

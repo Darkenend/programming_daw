@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class SumaEntersComes {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Escriu una serie de nombres separats per comes");
 		String text = teclado.nextLine();

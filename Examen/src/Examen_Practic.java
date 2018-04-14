@@ -144,7 +144,6 @@ public class Examen_Practic {
 
 	//And now we execute ***everything*** (You have to imagine this line was written in Discord or Reddit)
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Examen_Practic op=new Examen_Practic();
 		op.sum();
 		op.sub();

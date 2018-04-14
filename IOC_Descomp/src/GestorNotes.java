@@ -20,7 +20,6 @@ public class GestorNotes {
 
     //main function
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         GestorNotes op = new GestorNotes();
         op.start();
         op.end();

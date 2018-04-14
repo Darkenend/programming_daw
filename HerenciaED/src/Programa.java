@@ -13,10 +13,6 @@ public class Programa {
      */
     public static void main(String[] args) {
         int student_amount;
-        /*
-         *  TODO Implement Start
-         *  TODO Figure out what's going on
-         */
         Scanner kb = new Scanner(System.in);
         student_amount = kb.nextInt();
         while (student_amount < 1) {

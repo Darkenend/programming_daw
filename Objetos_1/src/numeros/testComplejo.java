@@ -17,10 +17,6 @@ public class testComplejo {
      */
 
     public static void main(String[] args) {
-        /*
-         *  TODO Implement Start
-         *  TODO Figure out what's going on
-         */
         testComplejo op = new testComplejo();
         op.input();
         Complejo obj1 = new Complejo(re, im);

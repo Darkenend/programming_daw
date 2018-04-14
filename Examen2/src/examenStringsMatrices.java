@@ -19,7 +19,6 @@ public class examenStringsMatrices {
 	static int choice = 0;
 	
 	public examenStringsMatrices() {
-		// TODO Auto-generated constructor stub
 		System.out.println("Bienvenido.");
 		System.out.println("Introduce una frase:");
 		input1=teclado.nextLine();
@@ -147,7 +146,6 @@ public class examenStringsMatrices {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		examenStringsMatrices op=new examenStringsMatrices();
 		switch (choice) {
 		case 1:

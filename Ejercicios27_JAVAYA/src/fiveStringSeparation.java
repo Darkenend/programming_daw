@@ -15,7 +15,6 @@ public class fiveStringSeparation {
 	String sentence;
 	
 	public fiveStringSeparation() {
-		// TODO Auto-generated constructor stub
 		System.out.println("Introduce la frase a separar");
 		sentence=teclado.nextLine();
 	}
@@ -31,7 +30,6 @@ public class fiveStringSeparation {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		fiveStringSeparation op=new fiveStringSeparation();
 		op.printingLmao();
 	}

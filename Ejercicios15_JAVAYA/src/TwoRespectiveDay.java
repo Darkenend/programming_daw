@@ -8,11 +8,11 @@
 import java.util.Scanner;
 
 public class TwoRespectiveDay {
-	Scanner teclado = new Scanner(System.in);
-	String day;
-	int n;
+	private Scanner teclado = new Scanner(System.in);
+	private String day;
+	private int n;
 	
-	public void input() {
+	private void input() {
 		System.out.println("Introduce el dia de la semana:");
 		n=teclado.nextInt();
 		while (n < 1 || (n > 7 && n != 273)) {
@@ -22,7 +22,7 @@ public class TwoRespectiveDay {
 		}
 	}
 	
-	public void operation() {
+	private void operation() {
 		switch (n) {
 		case 1:
 			day="Lunes";
@@ -54,12 +54,11 @@ public class TwoRespectiveDay {
 		}
 	}
 	
-	public void display() {
+	private void display() {
 		System.out.println("El dia "+n+" de la semana corresponde al "+day);
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		TwoRespectiveDay operations=new TwoRespectiveDay();
 		operations.input();
 		operations.operation();

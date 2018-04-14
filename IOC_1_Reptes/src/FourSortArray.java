@@ -42,7 +42,6 @@ public class FourSortArray {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		FourSortArray op=new FourSortArray();
 		op.Sorting();
 		op.Printing();

@@ -9,7 +9,6 @@
 public class BURNITDOWN {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Persona persona=new Persona();
 		Empleado empleado=new Empleado();
 		persona.loadData();

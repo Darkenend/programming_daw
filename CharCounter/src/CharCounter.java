@@ -16,7 +16,6 @@ public class CharCounter {
 	int count = 0;
 	
 	public CharCounter() {
-		// TODO Auto-generated constructor stub
 		System.out.println("Este programa va a pedir una letra y una frase, y a continuacion contara cuantas veces se repite dicha letra.");
 	}
 	
@@ -51,7 +50,6 @@ public class CharCounter {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		CharCounter op=new CharCounter();
 		op.charInput();
 		op.stringInput();

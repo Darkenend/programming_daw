@@ -9,9 +9,6 @@ import java.util.Random;
  */
 
 public class Revolver {
-    /*
-        TODO Add documentation of each method
-     */
     private int current_position;
     private int round_position;
     private int capacity;

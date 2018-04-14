@@ -9,7 +9,6 @@
 public class Repte2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Repte2 op = new Repte2();
 		op.start();
 	}
