@@ -7,14 +7,20 @@ import java.util.Random;
  */
 
 public class Gryffindor extends Alumno {
-    private String mascota;
 
     public Gryffindor() {
+        System.out.print("Creando alumno... 1");
         generateName();
+        System.out.print("...2");
         generateAge();
+        System.out.print("...3");
         setReply();
+        System.out.print("...4");
         setHouse();
+        System.out.print("...5");
         setProperty();
+        System.out.print("...Completo");
+        System.out.println();
     }
 
     public void generateName() {
@@ -45,19 +51,19 @@ public class Gryffindor extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.mascota="Buho";
+                this.property="Buho";
                 break;
             case 1:
-                this.mascota="Rata";
+                this.property="Rata";
                 break;
             case 2:
-                this.mascota="Gato";
+                this.property="Gato";
                 break;
             case 3:
-                this.mascota="Conejo";
+                this.property="Conejo";
                 break;
             default:
-                this.mascota="Paloma";
+                this.property="Paloma";
                 break;
         }
     }

@@ -7,26 +7,30 @@ import java.util.Random;
  */
 
 public class Slytherin extends Alumno {
-    protected String weapon;
 
     public Slytherin() {
+        System.out.print("Creando alumno... 1");
         generateName();
+        System.out.print("...2");
         generateAge();
+        System.out.print("...3");
         setReply();
+        System.out.print("...4");
         setHouse();
+        System.out.print("...5");
         setProperty();
+        System.out.print("...Completo");
+        System.out.println();
     }
 
     public void generateName() {
         Random rng = new Random();
         String[] names = {"Ben", "Mia", "Jonas", "Emma", "Leon", "Hanna", "Elias", "Sophia", "Finn", "Anna"};
-        String[] lastnames = {"", "", "", "", "", "", "", "", "", ""};
+        String[] lastnames = {"Müller", "Schmidt", "Schneider", "Fischer", "Weber", "Mayer", "Wagner", "Becker", "Schulz", "Hoffmann"};
         int temp = rng.nextInt(10);
         this.name = names[temp];
         temp = rng.nextInt(10);
         this.lastname = lastnames[temp];
-        temp = rng.nextInt(10);
-        this.lastname = this.lastname+" "+lastnames[temp];
     }
 
     public void generateAge() {
@@ -47,19 +51,19 @@ public class Slytherin extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.weapon="Pistola";
+                this.property="Pistola";
                 break;
             case 1:
-                this.weapon="Escopeta";
+                this.property="Escopeta";
                 break;
             case 2:
-                this.weapon="Subfusil";
+                this.property="Subfusil";
                 break;
             case 3:
-                this.weapon="Rifle de Asalto";
+                this.property="Rifle de Asalto";
                 break;
             default:
-                this.weapon="BFG";
+                this.property="BFG";
                 break;
         }
     }

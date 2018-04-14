@@ -7,14 +7,20 @@ import java.util.Random;
  */
 
 public class Ravenclaw extends Alumno {
-    protected String book;
 
     public Ravenclaw() {
+        System.out.print("Creando alumno... 1");
         generateName();
+        System.out.print("...2");
         generateAge();
+        System.out.print("...3");
         setReply();
+        System.out.print("...4");
         setHouse();
+        System.out.print("...5");
         setProperty();
+        System.out.print("...Completo");
+        System.out.println();
     }
 
     public void generateName() {
@@ -25,8 +31,6 @@ public class Ravenclaw extends Alumno {
         this.name = names[temp];
         temp = rng.nextInt(10);
         this.lastname = lastnames[temp];
-        temp = rng.nextInt(10);
-        this.lastname = this.lastname+" "+lastnames[temp];
     }
 
     public void generateAge() {
@@ -47,19 +51,19 @@ public class Ravenclaw extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.book="Metamorfosis";
+                this.property="Metamorfosis";
                 break;
             case 1:
-                this.book="Asi Habló Zaratustra";
+                this.property="Asi Habló Zaratustra";
                 break;
             case 2:
-                this.book="Vida y Obra de John Carmack";
+                this.property="Vida y Obra de John Carmack";
                 break;
             case 3:
-                this.book="En C++ creemos";
+                this.property="En C++ creemos";
                 break;
             default:
-                this.book="Hablando de imbéciles";
+                this.property="Hablando de imbéciles";
                 break;
         }
     }

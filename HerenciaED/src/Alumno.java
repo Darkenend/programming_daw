@@ -10,7 +10,7 @@ public abstract class Alumno {
         TODO Implement methods
         TODO Figure more stuff
      */
-    protected String name, lastname, house, fav_sub = "Entornos de Desarrollo mágicos", reply;
+    protected String name, lastname, house, fav_sub = "Entornos de Desarrollo mágicos", reply, property;
     protected int age;
 
     protected abstract void generateName();

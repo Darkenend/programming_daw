@@ -7,14 +7,20 @@ import java.util.Random;
  */
 
 public class Hufflepuff extends Alumno {
-    protected String plant;
 
     public Hufflepuff() {
+        System.out.print("Creando alumno... 1");
         generateName();
+        System.out.print("...2");
         generateAge();
+        System.out.print("...3");
         setReply();
+        System.out.print("...4");
         setHouse();
+        System.out.print("...5");
         setProperty();
+        System.out.print("...Completo");
+        System.out.println();
         this.fav_sub="Lenguaje de Marcas y Runas";
     }
 
@@ -26,8 +32,6 @@ public class Hufflepuff extends Alumno {
         this.name = names[temp];
         temp = rng.nextInt(10);
         this.lastname = lastnames[temp];
-        temp = rng.nextInt(10);
-        this.lastname = this.lastname+" "+lastnames[temp];
     }
 
     public void generateAge() {
@@ -48,19 +52,19 @@ public class Hufflepuff extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.plant="Geranios";
+                this.property="Geranios";
                 break;
             case 1:
-                this.plant="Opio";
+                this.property="Opio";
                 break;
             case 2:
-                this.plant="Alcachofas";
+                this.property="Alcachofas";
                 break;
             case 3:
-                this.plant="Plastico";
+                this.property="Plastico";
                 break;
             default:
-                this.plant="Cocaina";
+                this.property="Cocaina";
                 break;
         }
     }
