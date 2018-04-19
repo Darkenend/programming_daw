@@ -35,7 +35,6 @@ public final class CuentaBancaria {
     }
 
     public void setTitular(String titular) throws Exception{
-        /* Comprobamos la longitud de la cadena introducida como titular */
         if(titular.length()>=MINLENGTH && titular.length()<=MAXLENGTH){
             this.titular=titular;
         }else{
@@ -87,8 +86,6 @@ public final class CuentaBancaria {
         boolean si=false;
         int valor;
         CCC=CCC.trim();
-        // Comprobamos que se hayan introducido 20 dígitos numéricos
-        // Si es así se devuelve 'true' y en caso contrario devolvemos 'false'
         if(CCC.length()==20){
             si=true;
             for(int i=0;i<CCC.length();i++){
