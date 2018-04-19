@@ -1,101 +1,130 @@
-/**
- * @author Álvaro Real
- * @author darkenend.net
- * @version 1.0.0
- */
 
-public class CuentaBancaria {
-    /*
-        TODO Create all methods
-        TODO Implement functionality for all methods
-     */
-    /*
-    This class sorts out how a bank account works
-    from the class AplicacionCuentaBancaria.
-     */
+public final class CuentaBancaria {
     private String titular;
-    private float saldo;
-    private int entidad;
-    private int oficina;
-    private int numCuenta;
-    public static int maxSize=100;
-    public static int minSize=10;
+    private double saldo;
+    private String entidad;
+    private String oficina;
+    private String numCuenta;
+    public static final int MAXLENGTH=100;
+    public static final int MINLENGTH=10;
 
-    //Complex constructor
-    public CuentaBancaria(String titular, String entidad, String oficina, String DC, String numCuenta) {
-        boolean validation = true;
-        String DC_calc=calcularDigitosControl(entidad, oficina, numCuenta);
-        if (titular.length()<minSize || titular.length()>maxSize) validation=false;
-        if (entidad.length()!=4) validation=false;
-        if (oficina.length()!=4) validation=false;
-        if (DC.length()!=2) validation=false;
-        if (DC!=DC_calc) validation=false;
-        if (validation) {
-            this.saldo=0;
-        } else {
-            //IllegalArgumentException here
-        }
-
-    }
-
-    //Simple constructor
-    public CuentaBancaria(String titular, String CCC) {
+    public CuentaBancaria(String titular, String entidad, String oficina, String DC,String numCuenta) throws Exception{
+        if(titular.length()<MINLENGTH || titular.length()>MAXLENGTH)
+            throw new IllegalArgumentException("Sólo se admiten nombres de titular entre 10 y 100 caracteres");
+        if(!entidad.equals(String.valueOf(Integer.parseInt(entidad))))
+            throw new IllegalArgumentException("Número de entidad no válido");
+        if(!oficina.equals(String.valueOf(Integer.parseInt(oficina))))
+            throw new IllegalArgumentException("Número de oficina no válido");
+        if(!numCuenta.equals(String.valueOf(Integer.parseInt(numCuenta))))
+            throw new IllegalArgumentException("Número de cuenta no válido");
+        if(!comprobarCCC(entidad+oficina+DC+numCuenta))
+            throw new IllegalArgumentException("Codigo Cuenta Cliente no válido");
+        if(!DC.equals(obtenerDigitosControl(entidad,oficina,numCuenta)))
+            throw new IllegalArgumentException("Dígitos de Control NO válidos");
+        this.titular=titular;
+        this.entidad=entidad;
+        this.oficina=oficina;
+        this.numCuenta=numCuenta;
         this.saldo=0;
     }
 
-
-    //This method calculates the control digits of the bank account, to ensure security
-    public String calcularDigitosControl(String h1, String h2, String h3) {
-        //Condig is the result, help 1 to 3 are the int adaptation of h 1 to 3 to operate with it, we return the result.
-        int condig, help1 = Integer.parseInt(h1), help2 = Integer.parseInt(h2), help3 = Integer.parseInt(h3);
-        condig = help1+help2+help3;
-        String result = String.valueOf(condig);
-        return result;
+    public CuentaBancaria(String titular, String CCC) throws Exception{
+        this (titular, CCC.substring(0, 4), CCC.substring(4, 8), CCC.substring(8, 10), CCC.substring(10, 20));
+        if (!comprobarCCC(CCC))
+            throw new IllegalArgumentException("Número de cuenta no válido");
     }
 
-    //Methods that print a set of data
-    public void printTitular() {
-        System.out.println("El titular de la cuenta es: "+this.titular);
-    }
-    public void printSaldo() {
-        System.out.println("Tu saldo es: "+this.saldo);
-    }
-    public void printNumCuenta() {
-        System.out.println("Numero de cuenta: "+this.numCuenta);
-    }
-    public void printEntidad() {
-        System.out.println("Tu entidad es: "+this.entidad);
-    }
-    public void printOficina() {
-        System.out.println("Tu oficina es: "+this.oficina);
-    }
-
-    //Method to change the holder of the account
-    public void setTitular(String new_titular) {
-        if (titular.length()<minSize||titular.length()>maxSize) {
-            //IllegalArgumentException here
-        } else {
-            this.titular = new_titular;
+    public void setTitular(String titular) throws Exception{
+        /* Comprobamos la longitud de la cadena introducida como titular */
+        if(titular.length()>=MINLENGTH && titular.length()<=MAXLENGTH){
+            this.titular=titular;
+        }else{
+            throw new IllegalArgumentException("Sólo se admiten nombres de titular entre 10 y 100 caracteres");
         }
     }
 
-    //Methods to input and deduct money
-    public void moneyIncrement(float payment) {
-        this.saldo=this.saldo+payment;
-    }
-    public void moneyDecrease(float payment) {
-        this.saldo=this.saldo-payment;
+    public String getTitular(){
+        return titular;
     }
 
-    //Method to validate the CCC
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public String getEntidad(){
+        return entidad;
+    }
+
+    public String getOficina(){
+        return oficina;
+    }
+
+    public String getNumCuenta(){
+        return numCuenta;
+    }
+
+    public void ingresar(double cantidad) throws Exception{
+        if(cantidad>=0){
+            saldo+=cantidad;
+        }else{
+            throw new IllegalArgumentException("Sólo se permiten valores positivos");
+        }
+    }
+
+    public void retirar(double cantidad) throws Exception{
+        if(cantidad>=0){
+            if(cantidad<=getSaldo()){
+                saldo-=cantidad;
+            }else{
+                throw new IllegalArgumentException("El saldo es inferior a la cantidad a descontar");
+            }
+        }else{
+            throw new IllegalArgumentException("Sólo se permiten valores positivos");
+        }
+    }
+
     public static boolean comprobarCCC(String CCC){
-        boolean res = false;
-        return res;
+        boolean si=false;
+        int valor;
+        CCC=CCC.trim();
+        // Comprobamos que se hayan introducido 20 dígitos numéricos
+        // Si es así se devuelve 'true' y en caso contrario devolvemos 'false'
+        if(CCC.length()==20){
+            si=true;
+            for(int i=0;i<CCC.length();i++){
+                valor=CCC.charAt(i)-48;
+                if(valor<0 || valor>10)
+                    si=false;
+            }
+        }
+        if(si){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    //Method that returns a string with all the shit
-    public String toString(String titular, String CCC, String saldo) {
-        String res = "La cuenta "+CCC+" con titular "+titular+" dispone de un saldo de "+saldo;
-        return res;
+    public static String obtenerDigitosControl(String entidad, String oficina, String
+            numCuenta){
+        int [] numeSerie={1,2,4,8,5,10,9,7,3,6};
+        String entOfi="00"+entidad+oficina;
+        String nume=numCuenta;
+        String DC="";
+        int dc1=0;
+        int dc2=0;
+        for(int x=0;x<numeSerie.length;x++){
+            dc1+=numeSerie[x]*(entOfi.charAt(x)-48);
+            dc2+=numeSerie[x]*(nume.charAt(x)-48);
+        }
+        dc1=11-(dc1%11);
+        dc2=11-(dc2%11);
+        dc1=dc1==11?0:dc1==10?1:dc1;
+        dc2=dc2==11?0:dc2==10?1:dc2;
+        DC=String.valueOf(dc1)+String.valueOf(dc2);
+        return DC;
+    }
+
+    public String toString(){
+        return titular+" CC:"+numCuenta+" Saldo:"+saldo;
     }
 }
