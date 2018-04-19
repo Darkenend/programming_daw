@@ -101,8 +101,7 @@ public final class CuentaBancaria {
         }
     }
 
-    public static String obtenerDigitosControl(String entidad, String oficina, String
-            numCuenta){
+    public static String obtenerDigitosControl(String entidad, String oficina, String numCuenta){
         int [] numeSerie={1,2,4,8,5,10,9,7,3,6};
         String entOfi="00"+entidad+oficina;
         String nume=numCuenta;
