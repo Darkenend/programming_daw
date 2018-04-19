@@ -1,41 +1,27 @@
-import java.util.Random;
-
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 public class Slytherin extends Alumno {
 
     public Slytherin() {
-        System.out.print("Creando alumno... 1");
-        generateName();
-        System.out.print("...2");
+        System.out.print("Creando alumno...");
+        generateFullName();
         generateAge();
-        System.out.print("...3");
         setReply();
-        System.out.print("...4");
         setHouse();
-        System.out.print("...5");
         setProperty();
         System.out.print("...Completo");
         System.out.println();
     }
 
-    public void generateName() {
-        Random rng = new Random();
+    public void generateFullName() {
         String[] names = {"Ben", "Mia", "Jonas", "Emma", "Leon", "Hanna", "Elias", "Sophia", "Finn", "Anna"};
         String[] lastnames = {"Müller", "Schmidt", "Schneider", "Fischer", "Weber", "Mayer", "Wagner", "Becker", "Schulz", "Hoffmann"};
-        int temp = rng.nextInt(10);
-        this.name = names[temp];
-        temp = rng.nextInt(10);
-        this.lastname = lastnames[temp];
-    }
-
-    public void generateAge() {
-        Random rng = new Random();
-        this.age = rng.nextInt(6)+12;
+        generateName(names);
+        generateLastname(lastnames);
     }
 
     public void setHouse() {
@@ -47,7 +33,6 @@ public class Slytherin extends Alumno {
     }
 
     public void setProperty() {
-        Random rng = new Random();
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:

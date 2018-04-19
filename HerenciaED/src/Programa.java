@@ -2,9 +2,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
+ * This program creates a list of students and then displays their information,
+ * it's set in the Harry Potter Universe
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 public class Programa {
@@ -22,46 +24,59 @@ public class Programa {
             student_amount = kb.nextInt();
         }
         Alumno[] op = new Alumno[student_amount];
-        for (int i = 0; i < student_amount; i++) {
+        studentCreate(op);
+        studentPrint(op);
+    }
+
+    /**
+     * This method uses a loop to create different students
+     * @param alumni_array This is an array of the "Alumno" object that stores the alumni's information
+     */
+    public static void studentCreate(Alumno[] alumni_array) {
+        for (int i = 0; i < alumni_array.length; i++) {
             Random rng = new Random();
             int temp = rng.nextInt(4);
             switch (temp) {
                 case 0:
-                    op[i] = new Gryffindor();
+                    alumni_array[i] = new Gryffindor();
                     break;
                 case 1:
-                    op[i] = new Slytherin();
+                    alumni_array[i] = new Slytherin();
                     break;
                 case 2:
-                    op[i] = new Ravenclaw();
+                    alumni_array[i] = new Ravenclaw();
                     break;
                 case 3:
-                    op[i] = new Hufflepuff();
-                    break;
-                default:
-                    System.out.println("This shouldn't be read");
+                    alumni_array[i] = new Hufflepuff();
                     break;
             }
         }
-        for (int i = 0; i < student_amount; i++) {
+    }
+
+    /**
+     * This method uses a loop to print the students' information
+     * @param alumni_array This is an array of the "Alumno" object that stores the alumni's information
+     */
+    public static void studentPrint(Alumno[] alumni_array) {
+        for (int i = 0; i < alumni_array.length; i++) {
             System.out.println("Alumno "+(i+1));
-            System.out.println("Nombre: "+op[i].name+" "+op[i].lastname);
-            System.out.println("Casa: "+op[i].house);
-            System.out.println("Edad: "+op[i].age);
-            System.out.println("Opinion sobre los deberes: "+op[i].reply);
-            System.out.println("Asignatura preferida: "+op[i].fav_sub);
-            switch (op[i].house) {
+            System.out.println("Nombre: "+alumni_array[i].name+" "+alumni_array[i].lastname);
+            System.out.println("Casa: "+alumni_array[i].house);
+            System.out.println("Edad: "+alumni_array[i].age);
+            System.out.println("Opinion sobre los deberes: "+alumni_array[i].reply);
+            System.out.println("Asignatura preferida: "+alumni_array[i].fav_sub);
+            switch (alumni_array[i].house) {
                 case "Gryffindor":
-                    System.out.println("Mascota: "+op[i].property);
+                    System.out.println("Mascota: "+alumni_array[i].property);
                     break;
                 case "Slytherin":
-                    System.out.println("Arma: "+op[i].property);
+                    System.out.println("Arma: "+alumni_array[i].property);
                     break;
                 case "Ravenclaw":
-                    System.out.println("Libro: "+op[i].property);
+                    System.out.println("Libro: "+alumni_array[i].property);
                     break;
                 case "Hufflepuff":
-                    System.out.println("Planta: "+op[i].property);
+                    System.out.println("Planta: "+alumni_array[i].property);
                     break;
             }
             System.out.println();
