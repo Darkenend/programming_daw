@@ -1,11 +1,11 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 public class Gryffindor extends Alumno {
-
+    protected String pet;
 
     public Gryffindor() {
         System.out.print("Creando alumno...");
@@ -38,20 +38,24 @@ public class Gryffindor extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.property="Buho";
+                this.pet ="Buho";
                 break;
             case 1:
-                this.property="Rata";
+                this.pet ="Rata";
                 break;
             case 2:
-                this.property="Gato";
+                this.pet ="Gato";
                 break;
             case 3:
-                this.property="Conejo";
+                this.pet ="Conejo";
                 break;
             default:
-                this.property="Paloma";
+                this.pet ="Paloma";
                 break;
         }
+    }
+
+    public String getProperty() {
+        return "Mascota: "+this.pet;
     }
 }

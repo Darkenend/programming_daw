@@ -4,11 +4,11 @@ import java.util.Random;
  * This is the parent class for each one of the classes based on each house.
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 public abstract class Alumno {
-    protected String name, lastname, house, fav_sub = "Entornos de Desarrollo mágicos", reply, property;
+    protected String name, lastname, house, fav_sub = "Entornos de Desarrollo mágicos", reply;
     protected int age;
     protected Random rng = new Random();
 
@@ -54,10 +54,9 @@ public abstract class Alumno {
     protected String getReply() {
         return this.reply;
     }
-    protected String getProperty() {
-        return this.property;
-    }
+    protected abstract String getProperty();
     protected int getAge() {
         return this.age;
     }
+    protected String getFullName() { return getName()+" "+getLastname(); }
 }

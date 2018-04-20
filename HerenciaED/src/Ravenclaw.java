@@ -1,10 +1,11 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 public class Ravenclaw extends Alumno {
+    protected String book;
 
     public Ravenclaw() {
         System.out.print("Creando alumno...");
@@ -36,20 +37,24 @@ public class Ravenclaw extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.property="Metamorfosis";
+                this.book ="Metamorfosis";
                 break;
             case 1:
-                this.property="Asi Habló Zaratustra";
+                this.book ="Asi Habló Zaratustra";
                 break;
             case 2:
-                this.property="Vida y Obra de John Carmack";
+                this.book ="Vida y Obra de John Carmack";
                 break;
             case 3:
-                this.property="En C++ creemos";
+                this.book ="En C++ creemos";
                 break;
             default:
-                this.property="Hablando de imbéciles";
+                this.book ="Hablando de imbéciles";
                 break;
         }
+    }
+
+    public String getProperty() {
+        return "Libro: "+this.book;
     }
 }

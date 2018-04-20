@@ -1,10 +1,11 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 public class Slytherin extends Alumno {
+    protected String weapon;
 
     public Slytherin() {
         System.out.print("Creando alumno...");
@@ -36,20 +37,24 @@ public class Slytherin extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.property="Pistola";
+                this.weapon="Pistola";
                 break;
             case 1:
-                this.property="Escopeta";
+                this.weapon="Escopeta";
                 break;
             case 2:
-                this.property="Subfusil";
+                this.weapon="Subfusil";
                 break;
             case 3:
-                this.property="Rifle de Asalto";
+                this.weapon="Rifle de Asalto";
                 break;
             default:
-                this.property="BFG";
+                this.weapon="BFG";
                 break;
         }
+    }
+
+    public String getProperty() {
+        return "Arma: "+this.weapon;
     }
 }

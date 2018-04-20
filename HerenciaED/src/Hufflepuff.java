@@ -1,10 +1,11 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 public class Hufflepuff extends Alumno {
+    protected String plant;
 
     public Hufflepuff() {
         System.out.print("Creando alumno...");
@@ -37,20 +38,24 @@ public class Hufflepuff extends Alumno {
         int temp = rng.nextInt(4);
         switch (temp) {
             case 0:
-                this.property="Geranios";
+                this.plant ="Geranios";
                 break;
             case 1:
-                this.property="Opio";
+                this.plant ="Opio";
                 break;
             case 2:
-                this.property="Alcachofas";
+                this.plant ="Alcachofas";
                 break;
             case 3:
-                this.property="Plastico";
+                this.plant ="Plastico";
                 break;
             default:
-                this.property="Cocaina";
+                this.plant ="Cocaina";
                 break;
         }
+    }
+
+    public String getProperty() {
+        return "Planta: "+this.plant;
     }
 }
