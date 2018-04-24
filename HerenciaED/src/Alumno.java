@@ -4,7 +4,7 @@ import java.util.Random;
  * This is the parent class for each one of the classes based on each house.
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 public abstract class Alumno {
@@ -15,7 +15,12 @@ public abstract class Alumno {
     /**
      * The method generateFullName will generate a String with a name and a last name at random from a selection of 10 each
      */
-    protected abstract void generateFullName();
+    public void generateFullName() {
+        String[] names = {"Noah", "Emma", "William", "Olivia", "James", "Ava", "Jacob", "Sophia", "Elijah", "Isabella"};
+        String[] lastnames = {"Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia", "Rodriguez", "Wilson"};
+        generateName(names);
+        generateLastname(lastnames);
+    }
 
     /**
      * The methods generateName and generateLastname pick a string from a set of 10 with a pseudorandom
@@ -30,7 +35,7 @@ public abstract class Alumno {
     }
 
     protected void generateAge() {
-        this.age = rng.nextInt(6)+12;
+        this.age = rng.nextInt(8)+11;
     }
 
     //These are simple setters

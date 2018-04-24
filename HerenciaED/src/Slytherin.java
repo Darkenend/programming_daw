@@ -1,7 +1,7 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 public class Slytherin extends Alumno {
@@ -18,21 +18,17 @@ public class Slytherin extends Alumno {
         System.out.println();
     }
 
-    public void generateFullName() {
-        String[] names = {"Ben", "Mia", "Jonas", "Emma", "Leon", "Hanna", "Elias", "Sophia", "Finn", "Anna"};
-        String[] lastnames = {"Müller", "Schmidt", "Schneider", "Fischer", "Weber", "Mayer", "Wagner", "Becker", "Schulz", "Hoffmann"};
-        generateName(names);
-        generateLastname(lastnames);
-    }
-
+    @Override
     public void setHouse() {
         this.house="Slytherin";
     }
 
+    @Override
     public void setReply() {
         this.reply="Torturé a un elfo doméstico para que los hiciera";
     }
 
+    @Override
     public void setProperty() {
         int temp = rng.nextInt(4);
         switch (temp) {
@@ -54,6 +50,7 @@ public class Slytherin extends Alumno {
         }
     }
 
+    @Override
     public String getProperty() {
         return "Arma: "+this.weapon;
     }

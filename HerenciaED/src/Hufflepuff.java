@@ -1,7 +1,7 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 public class Hufflepuff extends Alumno {
@@ -19,21 +19,17 @@ public class Hufflepuff extends Alumno {
         this.fav_sub="Lenguaje de Marcas y Runas";
     }
 
-    public void generateFullName() {
-        String[] names = {"Nikau", "Maia", "Ari", "Manaia", "Manaia", "Anahera", "Wiremu", "Ana", "Kauri", "Aroha"};
-        String[] lastnames = {"Smith", "Wilson", "Williams", "Brown", "Taylor", "Jones", "Singh", "Wang", "Anderson", "Li"};
-        generateName(names);
-        generateLastname(lastnames);
-    }
-
+    @Override
     public void setHouse() {
         this.house="Hufflepuff";
     }
 
+    @Override
     public void setReply() {
         this.reply="¿Había deberes?";
     }
 
+    @Override
     public void setProperty() {
         int temp = rng.nextInt(4);
         switch (temp) {
@@ -55,6 +51,7 @@ public class Hufflepuff extends Alumno {
         }
     }
 
+    @Override
     public String getProperty() {
         return "Planta: "+this.plant;
     }

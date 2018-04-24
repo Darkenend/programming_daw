@@ -1,7 +1,7 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 public class Ravenclaw extends Alumno {
@@ -18,21 +18,17 @@ public class Ravenclaw extends Alumno {
         System.out.println();
     }
 
-    public void generateFullName() {
-        String[] names = {"Minato", "Sakura", "Tatsuki", "Riko", "Ren", "Aoi", "Haruta", "Wakana", "Haruki", "Yumiko"};
-        String[] lastnames = {"Sato", "Suzuki", "Takahashi", "Tanaka", "Watanabe", "Ito", "Nakamura", "Kobayashi", "Yamamoto", "Kato"};
-        generateName(names);
-        generateLastname(lastnames);
-    }
-
+    @Override
     public void setHouse() {
         this.house="Ravenclaw";
     }
 
+    @Override
     public void setReply() {
         this.reply="¿A eso llamas deberes?";
     }
 
+    @Override
     public void setProperty() {
         int temp = rng.nextInt(4);
         switch (temp) {
@@ -54,6 +50,7 @@ public class Ravenclaw extends Alumno {
         }
     }
 
+    @Override
     public String getProperty() {
         return "Libro: "+this.book;
     }

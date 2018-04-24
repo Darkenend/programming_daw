@@ -1,7 +1,7 @@
 /**
  * @author Álvaro Real
  * @author darkenend.net
- * @version 1.2.0
+ * @version 1.3.0
  */
 
 public class Gryffindor extends Alumno {
@@ -18,22 +18,17 @@ public class Gryffindor extends Alumno {
         System.out.println();
     }
 
-    public void generateFullName() {
-        String[] names = {"Noah", "Emma", "William", "Olivia", "James", "Ava", "Jacob", "Sophia", "Elijah", "Isabella"};
-        String[] lastnames = {"Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia", "Rodriguez", "Wilson"};
-        generateName(names);
-        generateLastname(lastnames);
-    }
-
-
+    @Override
     public void setReply() {
         this.reply="Por supuesto los he hecho";
     }
 
+    @Override
     public void setHouse() {
         this.house="Gryffindor";
     }
 
+    @Override
     public void setProperty() {
         int temp = rng.nextInt(4);
         switch (temp) {
@@ -55,6 +50,7 @@ public class Gryffindor extends Alumno {
         }
     }
 
+    @Override
     public String getProperty() {
         return "Mascota: "+this.pet;
     }
