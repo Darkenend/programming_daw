@@ -3,9 +3,8 @@ package part1;
 import java.util.List;
 
 public class Profesor extends Persona {
-    String str;
+    String nombre;
     int edad;
-    String numeroDeTelefono;
     List<Prestamo> prestamos;
 
     public Profesor(String numeroDeTelefono) {
@@ -13,7 +12,7 @@ public class Profesor extends Persona {
     }
 
     public void printInformacionPersonal() {
-        System.out.println("Nombre: "+this.str);
+        System.out.println("Nombre: "+this.nombre);
         System.out.println("Edad: "+this.edad);
         System.out.println("Teléfono: "+this.numeroDeTelefono);
     }
