@@ -20,8 +20,9 @@ public class ArrayListEx2 {
                 numbers
              ) {
             int nos=i;
-            System.out.println();
+            System.out.println(nos);
         }
+        /*
         for (Integer i:
                 numbers
              ) {
@@ -29,6 +30,7 @@ public class ArrayListEx2 {
                 numbers.remove(i);
             }
         }
+        */
         System.out.println(numbers);
     }
 }
