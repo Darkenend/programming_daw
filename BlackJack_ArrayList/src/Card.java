@@ -15,7 +15,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "La carta es el "+getValue()+" de "+getSuit()+".";
+        return "The card is the "+getValue()+" of "+getSuit()+".";
     }
 
     //Getters and Setters

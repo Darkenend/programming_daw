@@ -33,18 +33,20 @@ public class Game {
             System.out.println(printing.getName());
         }
         System.out.println("Do you want to start a match with these players?");
-        System.out.println("1. Yes");
-        System.out.println("2. No");
+        System.out.println("[1]. Yes");
+        System.out.println("[2]. No");
         int help = keyboard.nextInt();
         while (help != 1 && help != 2) {
             System.out.println("Do you want to start a match with these players?");
-            System.out.println("1. Yes");
-            System.out.println("2. No");
+            System.out.println("[1]. Yes");
+            System.out.println("[2]. No");
             help = keyboard.nextInt();
         }
         if (help == 1) {
             game_procedure();
+            endGame();
         }
+        System.out.println("We'll see ya sometime else, wastelander, take care!");
     }
 
     private static void game_procedure() {
@@ -52,13 +54,61 @@ public class Game {
         firstCardDrawing();
         while (!areAllBooleansFalse(finished)) {
             System.out.println(players.get(current_player).getName()+"'s turn: ");
-            players.get(current_player);
+            players.get(current_player).showCards();
+            players.get(current_player).scoreRecap();
+            if (players.get(current_player).getScore() > 21) {
+                System.out.println("You have overflown, you've lost.");
+                finished[current_player] = true;
+            } else {
+                int switcher = menuGameProcedure();
+                switch (switcher) {
+                    case 0:
+                        finished[current_player] = true;
+                        break;
+                    case 1:
+                        drawCard(current_player);
+                        break;
+                }
+            }
+            current_player++;
+            if (current_player == players.size()) {
+                current_player = 0;
+            }
         }
+    }
+
+    public static void endGame() {
+        System.out.println("End Game Results:");
+        String winner_name = "";
+        int winner_score = 0;
+        for (Player trash:players) {
+            System.out.println(trash.getName()+": "+trash.getScore());
+            if (trash.getScore() > winner_score && trash.getScore() < 22) {
+                winner_score = trash.getScore();
+                winner_name = trash.getName();
+            }
+        }
+        System.out.println("The winner is: "+winner_name+" with a score of "+winner_score);
+    }
+
+    public static int menuGameProcedure() {
+        System.out.println("Next action?");
+        System.out.println("[0]. I had enough");
+        System.out.println("[1]. One more card");
+        int solv = keyboard.nextInt();
+        while (solv < 0 || solv > 1) {
+            System.out.println("Next action?");
+            System.out.println("[0]. I had enough");
+            System.out.println("[1]. One more card");
+            solv = keyboard.nextInt();
+        }
+        return solv;
     }
 
     private static void firstCardDrawing() {
         int p_id = 0;
         for (Player fcd_player:players) {
+            System.out.println(fcd_player.getName()+" gets the 2 first cards...");
             drawCard(p_id);
             drawCard(p_id);
             p_id++;
@@ -118,16 +168,16 @@ public class Game {
             for (int j = 0; j < 12; j++) {
                 switch (i) {
                     case 0:
-                        cardset.add(new Card(j+1, "Oros"));
+                        cardset.add(new Card(j+1, "Spades"));
                         break;
                     case 1:
-                        cardset.add(new Card(j+1, "Copas"));
+                        cardset.add(new Card(j+1, "Hearts"));
                         break;
                     case 2:
-                        cardset.add(new Card(j+1, "Bastos"));
+                        cardset.add(new Card(j+1, "Diamonds"));
                         break;
                     case 3:
-                        cardset.add(new Card(j+1, "Espadas"));
+                        cardset.add(new Card(j+1, "Trees"));
                         break;
                 }
             }
