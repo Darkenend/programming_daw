@@ -9,36 +9,19 @@ package examen;
  *
  * @author Toni
  */
-public class Conserje {
-    public String nombre;
-    public String apellido;
-    public int numero;
-    public double sueldo;
-    public int antiguedad;
-    public String turno;
+public class Conserje extends Persona {
+    //Removed repeated variables, made the variable private because it's not used from outside this class
+    private String turno;
 
-
-
-    public Conserje(String nombre, String apellido, int numero,
+    //Made package-private to improve security
+    Conserje(String nombre, String apellido, int numero,
                     double sueldo, int antiguedad, String turno){
         this.nombre=nombre;
         this.apellido=apellido;
         this.numero=numero;
         this.sueldo=sueldo;
-        this. antiguedad=antiguedad;
+        this.antiguedad=antiguedad;
         this.turno=turno;
-    }
-
-    public double pension(){
-        double pension;
-        if(antiguedad<30){
-            pension=sueldo*antiguedad/50;
-            return pension;
-        }
-        else{
-            pension=sueldo*antiguedad/30;
-            return pension;
-        }
     }
 
     public void metodo2(){

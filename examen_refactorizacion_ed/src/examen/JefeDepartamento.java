@@ -9,17 +9,12 @@ package examen;
  *
  * @author Toni
  */
-public class JefeDepartamento {
-    public String nombre;
-    public String apellido;
-    public int numero;
-    public double sueldo;
-    public int antiguedad;
-    public String departamento;
+public class JefeDepartamento extends Persona {
+    //Removed repeated variables, made the variable private because it's not used from outside this class
+    private String departamento;
 
-
-
-    public JefeDepartamento(String nombre, String apellido, int numero,
+    //Made package-private to improve security
+    JefeDepartamento(String nombre, String apellido, int numero,
                             double sueldo, int antiguedad, String departamento){
         this.nombre=nombre;
         this.apellido=apellido;
@@ -29,6 +24,8 @@ public class JefeDepartamento {
         this.departamento=departamento;
     }
 
+    //Added @Override to keep it sure that the "JefeDepartamento" keeps his status that's different to "Investigador", "Conserje" or other possible future classes
+    @Override
     public double pension(){
         double pension;
         if(antiguedad<30){

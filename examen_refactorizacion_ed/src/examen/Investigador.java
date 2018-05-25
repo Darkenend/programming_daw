@@ -9,17 +9,12 @@ package examen;
  *
  * @author Toni
  */
-public class Investigador {
-    public String nombre;
-    public String apellido;
-    public int numero;
-    public double sueldo;
-    public int antiguedad;
-    public String campo;
+public class Investigador extends Persona {
+    //Removed repeated variables, made the variable private because it's not used from outside this class
+    private String campo;
 
-
-
-    public Investigador(String nombre, String apellido, int numero,
+    //Made package-private to improve security
+    Investigador(String nombre, String apellido, int numero,
                         double sueldo, int antiguedad, String campo){
         this.nombre=nombre;
         this.apellido=apellido;
@@ -27,18 +22,6 @@ public class Investigador {
         this.sueldo=sueldo;
         this. antiguedad=antiguedad;
         this.campo=campo;
-    }
-
-    public double pension(){
-        double pension;
-        if(antiguedad<30){
-            pension=sueldo*antiguedad/50;
-            return pension;
-        }
-        else{
-            pension=sueldo*antiguedad/30;
-            return pension;
-        }
     }
 
     public void metodo2(){
