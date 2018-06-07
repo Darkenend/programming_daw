@@ -119,6 +119,7 @@ public class Persona {
         this.password = password;
     }
 
+    @Override
     public String toString() {
         return "Persona - Id:"+getId()+" Nombre: "+getNombre()+" Edad: "+getEdad()+" Usuario: "+getUsuario()+" Contraseña: "+getPassword();
     }

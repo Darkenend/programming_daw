@@ -112,7 +112,6 @@ public class Main {
      * hashTabling se encarga de hacer las operaciones con hashtables
      */
     private static void hashTabling(String in_user, String in_pass) {
-        System.out.println("WORK IN PROGRESS");
         Hashtable<String, String> ht_user = new Hashtable<>();
         for (Persona p: mayores) {
             ht_user.put(p.getUsuario(), p.getPassword());
